@@ -15,7 +15,7 @@
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
-
+#include "bitcoinrpc.h" //getdiff used in getblockreward
 
 using namespace std;
 using namespace boost;
@@ -966,8 +966,12 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 // miner's coin base reward
 int64 GetProofOfWorkReward(int64 nFees)
 {
-    int64 nSubsidy = 10000 * COIN;
 
+    int64 nSubsidy = 1 * COIN;
+
+double diff = GetDifficulty();
+
+nSubsidy = diff * .7 * COIN; // Block reward scales based on current block difficulty
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfWorkReward() : create=%s nSubsidy=%"PRI64d"\n", FormatMoney(nSubsidy).c_str(), nSubsidy);
 
