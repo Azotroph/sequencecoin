@@ -2757,8 +2757,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location line="+6"/>
-        <source>Listen for connections on &lt;port&gt; (default: 15714 or testnet: 25714)</source>
-        <translation>Listen for connections on &lt;port&gt; (default: 15714 or testnet: 25714)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 31114 or testnet: 21115)</source>
+        <translation>Listen for connections on &lt;port&gt; (default: 31114 or testnet: 21115)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2822,7 +2822,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location line="-83"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 15715 or testnet: 25715)</source>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 31115 or testnet: 21114)</source>
         <translation></translation>
     </message>
     <message>
